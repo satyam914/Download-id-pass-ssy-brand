@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Card Download</title>
+  <style>
+    body {
+      font-size: 16px;
+      padding: 10px;
+    }
+    form {
+      margin: 10px 0;
+    }
+    label, input {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 5px;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    h1, h2 {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <center><font color=red size=7><marquee>SSY BRAND</marquee></font></center>
+  <h2><img src="https://i.ibb.co/PYD13bk/newicon.gif"width="13%">ID Card Download Form</h2>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="membership_id">Enter Your Post:</label>
+    <input type="text" id="membership_id" name="membership_id" required>
+    
+    <input type="submit" value="Submit" onclick="sendEmail()">
+  </form>
+  
+  <h3><img src="https://media.tenor.com/zzZZwwmB-6YAAAAM/warning.gif" width="8%"><font color=red>If you don't know your post then visit / simple click below given link. </h3></font>
+  <ul>
+    <li><a href="https://satyam914.github.io/Leader-anoucement-board/" target="_blank">Check Your Post In SSY Brand</a></li><br>
+    
+  </ul>
+
+  <script>
+    function sendEmail() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var membership_id = document.getElementById('membership_id').value;
+      
+      var emailSubject = "ID Card Download Request";
+      var emailBody = "Name: " + name + "\nEmail: " + email + "\nMembership ID: " + membership_id;
+      
+      var mailtoLink = "mailto:ssybrand58@gmail.com?subject=" + encodeURIComponent(emailSubject) + "&body=" + encodeURIComponent(emailBody);
+      
+      window.open(mailtoLink);
+    }
+  </script>
+  <BR></BR>
+  <BR></BR>
+  <footer><center>
+    <font color=blue>Last update:-&nbsp;August 21,2023<BR></br><u><a href="ssy.rf.gd"><font color=red>SSY &nbsp;TEAM</a></font></center>
+  </footer>
+</body>
+</html>
